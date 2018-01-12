@@ -1,0 +1,1078 @@
+Analysis & Synthesis report for 141044076
+Wed Jan 03 19:47:48 2018
+Quartus II 64-Bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "mips_data_mem:datamem"
+ 11. Port Connectivity Checks: "mips_alu:alu"
+ 12. Port Connectivity Checks: "mips_control_unit:cunit"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jan 03 19:47:48 2018      ;
+; Quartus II 64-Bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
+; Revision Name                      ; 141044076                                  ;
+; Top-level Entity Name              ; mips_core                                  ;
+; Family                             ; Cyclone III                                ;
+; Total logic elements               ; 899                                        ;
+;     Total combinational functions  ; 633                                        ;
+;     Dedicated logic registers      ; 324                                        ;
+; Total registers                    ; 324                                        ;
+; Total pins                         ; 135                                        ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                                      ; mips_core          ; 141044076          ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
+; registers.mem                    ; yes             ; User Unspecified File  ; C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/registers.mem       ;         ;
+; instruction.mem                  ; yes             ; User Unspecified File  ; C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/instruction.mem     ;         ;
+; data.mem                         ; yes             ; User Unspecified File  ; C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/data.mem            ;         ;
+; mips_registers.v                 ; yes             ; User Verilog HDL File  ; C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_registers.v    ;         ;
+; mips_instr_mem.v                 ; yes             ; User Verilog HDL File  ; C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_instr_mem.v    ;         ;
+; mips_data_mem.v                  ; yes             ; User Verilog HDL File  ; C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_data_mem.v     ;         ;
+; mips_core.v                      ; yes             ; User Verilog HDL File  ; C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_core.v         ;         ;
+; mips_control_unit.v              ; yes             ; User Verilog HDL File  ; C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_control_unit.v ;         ;
+; mips_alu.v                       ; yes             ; User Verilog HDL File  ; C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_alu.v          ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 899         ;
+;                                             ;             ;
+; Total combinational functions               ; 633         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 389         ;
+;     -- 3 input functions                    ; 162         ;
+;     -- <=2 input functions                  ; 82          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 600         ;
+;     -- arithmetic mode                      ; 33          ;
+;                                             ;             ;
+; Total registers                             ; 324         ;
+;     -- Dedicated logic registers            ; 324         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 135         ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 324         ;
+; Total fan-out                               ; 3411        ;
+; Average fan-out                             ; 2.78        ;
++---------------------------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Library Name ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
+; |mips_core                         ; 633 (4)           ; 324 (4)      ; 0           ; 0            ; 0       ; 0         ; 135  ; 0            ; |mips_core                               ; work         ;
+;    |mips_alu:alu|                  ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_core|mips_alu:alu                  ; work         ;
+;    |mips_instr_mem:instructionmem| ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_core|mips_instr_mem:instructionmem ; work         ;
+;    |mips_registers:registers|      ; 573 (573)         ; 320 (320)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips_core|mips_registers:registers      ; work         ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++-----------------------------------------+---------------------------------------------+
+; Register name                           ; Reason for Removal                          ;
++-----------------------------------------+---------------------------------------------+
+; PC[4..31]                               ; Lost fanout                                 ;
+; mips_registers:registers|registers~32   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~96   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~448  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~416  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~480  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~384  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~192  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~160  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~128  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~288  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~320  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~960  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~704  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~832  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~928  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~544  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~672  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~800  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~992  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~608  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~896  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~640  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~417  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~449  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~481  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~385  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~33   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~97   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~161  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~193  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~129  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~321  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~289  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~545  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~929  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~673  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~801  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~961  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~705  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~833  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~609  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~993  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~897  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~641  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~34   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~98   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~450  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~418  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~482  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~386  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~194  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~162  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~130  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~290  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~322  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~962  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~706  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~834  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~930  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~546  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~674  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~802  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~994  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~610  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~898  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~642  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~419  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~451  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~483  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~387  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~35   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~99   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~163  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~195  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~131  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~323  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~291  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~547  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~931  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~675  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~803  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~963  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~707  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~835  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~611  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~995  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~899  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~643  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~36   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~100  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~452  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~420  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~484  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~388  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~196  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~164  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~132  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~292  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~324  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~964  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~708  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~836  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~932  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~548  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~676  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~804  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~996  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~612  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~900  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~644  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~421  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~453  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~485  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~389  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~37   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~101  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~165  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~197  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~133  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~325  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~293  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~549  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~933  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~677  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~805  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~965  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~709  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~837  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~613  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~997  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~901  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~645  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~38   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~102  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~454  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~422  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~486  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~390  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~198  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~166  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~134  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~294  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~326  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~966  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~710  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~838  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~934  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~550  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~678  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~806  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~998  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~614  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~902  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~646  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~423  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~455  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~487  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~391  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~39   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~103  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~167  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~199  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~135  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~327  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~295  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~551  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~935  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~679  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~807  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~967  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~711  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~839  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~615  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~999  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~903  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~647  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~40   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~104  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~456  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~424  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~488  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~392  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~200  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~168  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~136  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~296  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~328  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~968  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~712  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~840  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~936  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~552  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~680  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~808  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1000 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~616  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~904  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~648  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~425  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~457  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~489  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~393  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~41   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~105  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~169  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~201  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~137  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~329  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~297  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~553  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~937  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~681  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~809  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~969  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~713  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~841  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~617  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1001 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~905  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~649  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~42   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~106  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~458  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~426  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~490  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~394  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~202  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~170  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~138  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~298  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~330  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~970  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~714  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~842  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~938  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~554  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~682  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~810  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1002 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~618  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~906  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~650  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~427  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~459  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~491  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~395  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~43   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~107  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~171  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~203  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~139  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~331  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~299  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~555  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~939  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~683  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~811  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~971  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~715  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~843  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~619  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1003 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~907  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~651  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~44   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~108  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~460  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~428  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~492  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~396  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~204  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~172  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~140  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~300  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~332  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~972  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~716  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~844  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~940  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~556  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~684  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~812  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1004 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~620  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~908  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~652  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~429  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~461  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~493  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~397  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~45   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~109  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~173  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~205  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~141  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~333  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~301  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~557  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~941  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~685  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~813  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~973  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~717  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~845  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~621  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1005 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~909  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~653  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~46   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~110  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~462  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~430  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~494  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~398  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~206  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~174  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~142  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~302  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~334  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~974  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~718  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~846  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~942  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~558  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~686  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~814  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1006 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~622  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~910  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~654  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~431  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~463  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~495  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~399  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~47   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~111  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~175  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~207  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~143  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~335  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~303  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~559  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~943  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~687  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~815  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~975  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~719  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~847  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~623  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1007 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~911  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~655  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~48   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~112  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~464  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~432  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~496  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~400  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~208  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~176  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~144  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~304  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~336  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~976  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~720  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~848  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~944  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~560  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~688  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~816  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1008 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~624  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~912  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~656  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~433  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~465  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~497  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~401  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~49   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~113  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~177  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~209  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~145  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~337  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~305  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~561  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~945  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~689  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~817  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~977  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~721  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~849  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~625  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1009 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~913  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~657  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~50   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~114  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~466  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~434  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~498  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~402  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~210  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~178  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~146  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~306  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~338  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~978  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~722  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~850  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~946  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~562  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~690  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~818  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1010 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~626  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~914  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~658  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~435  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~467  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~499  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~403  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~51   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~115  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~179  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~211  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~147  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~339  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~307  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~563  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~947  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~691  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~819  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~979  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~723  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~851  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~627  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1011 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~915  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~659  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~52   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~116  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~468  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~436  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~500  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~404  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~212  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~180  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~148  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~308  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~340  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~980  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~724  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~852  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~948  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~564  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~692  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~820  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1012 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~628  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~916  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~660  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~437  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~469  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~501  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~405  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~53   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~117  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~181  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~213  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~149  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~341  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~309  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~565  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~949  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~693  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~821  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~981  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~725  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~853  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~629  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1013 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~917  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~661  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~54   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~118  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~470  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~438  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~502  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~406  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~214  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~182  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~150  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~310  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~342  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~982  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~726  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~854  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~950  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~566  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~694  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~822  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1014 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~630  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~918  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~662  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~439  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~471  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~503  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~407  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~55   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~119  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~183  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~215  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~151  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~343  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~311  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~567  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~951  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~695  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~823  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~983  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~727  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~855  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~631  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1015 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~919  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~663  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~56   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~120  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~472  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~440  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~504  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~408  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~216  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~184  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~152  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~312  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~344  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~984  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~728  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~856  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~952  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~568  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~696  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~824  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1016 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~632  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~920  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~664  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~441  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~473  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~505  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~409  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~57   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~121  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~185  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~217  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~153  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~345  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~313  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~569  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~953  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~697  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~825  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~985  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~729  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~857  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~633  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1017 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~921  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~665  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~58   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~122  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~474  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~442  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~506  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~410  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~218  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~186  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~154  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~314  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~346  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~986  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~730  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~858  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~954  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~570  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~698  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~826  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1018 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~634  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~922  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~666  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~443  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~475  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~507  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~411  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~59   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~123  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~187  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~219  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~155  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~347  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~315  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~571  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~955  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~699  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~827  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~987  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~731  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~859  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~635  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1019 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~923  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~667  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~60   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~124  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~476  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~444  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~508  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~412  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~220  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~188  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~156  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~316  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~348  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~988  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~732  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~860  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~956  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~572  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~700  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~828  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1020 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~636  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~924  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~668  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~445  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~477  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~509  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~413  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~61   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~125  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~189  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~221  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~157  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~349  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~317  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~573  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~957  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~701  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~829  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~989  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~733  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~861  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~637  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1021 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~925  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~669  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~62   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~126  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~478  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~446  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~510  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~414  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~222  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~190  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~158  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~318  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~350  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~990  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~734  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~862  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~958  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~574  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~702  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~830  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1022 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~638  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~926  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~670  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~447  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~479  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~511  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~415  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~63   ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~127  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~191  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~223  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~159  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~351  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~319  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~575  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~959  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~703  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~831  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~991  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~735  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~863  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~639  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~1023 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~927  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:registers|registers~671  ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 732 ;                                             ;
++-----------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 324   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 320   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mips_data_mem:datamem"                                                                   ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; read_data ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mips_alu:alu"                                                                              ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; signal_zero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mips_control_unit:cunit"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; RegDst   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Branch   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; MemtoReg ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ALUSrc   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
+    Info: Processing started: Wed Jan 03 19:47:44 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 141044076 -c 141044076
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file mips_testbench.v
+    Info (12023): Found entity 1: mips_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file mips_registers.v
+    Info (12023): Found entity 1: mips_registers
+Info (12021): Found 1 design units, including 1 entities, in source file mips_instr_mem.v
+    Info (12023): Found entity 1: mips_instr_mem
+Info (12021): Found 1 design units, including 1 entities, in source file mips_data_mem.v
+    Info (12023): Found entity 1: mips_data_mem
+Info (12021): Found 1 design units, including 1 entities, in source file mips_core.v
+    Info (12023): Found entity 1: mips_core
+Info (12021): Found 1 design units, including 1 entities, in source file im_tb.v
+    Info (12023): Found entity 1: im_tb
+Info (12021): Found 1 design units, including 1 entities, in source file mips_control_unit.v
+    Info (12023): Found entity 1: mips_control_unit
+Info (12021): Found 1 design units, including 1 entities, in source file mips_alu.v
+    Info (12023): Found entity 1: mips_alu
+Warning (10236): Verilog HDL Implicit Net warning at mips_testbench.v(16): created implicit net for "shamt"
+Warning (10236): Verilog HDL Implicit Net warning at mips_core.v(24): created implicit net for "imm"
+Info (12127): Elaborating entity "mips_core" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at mips_core.v(24): object "imm" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mips_core.v(15): object "shamt" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at mips_core.v(24): truncated value with size 16 to match size of target (1)
+Info (12128): Elaborating entity "mips_control_unit" for hierarchy "mips_control_unit:cunit"
+Warning (10270): Verilog HDL Case Statement warning at mips_control_unit.v(58): incomplete case statement has no default case item
+Info (12128): Elaborating entity "mips_instr_mem" for hierarchy "mips_instr_mem:instructionmem"
+Warning (10850): Verilog HDL warning at mips_instr_mem.v(9): number of words (10) in memory file does not match the number of elements in the address range [0:10]
+Warning (10030): Net "instr_mem.data_a" at mips_instr_mem.v(6) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "instr_mem.waddr_a" at mips_instr_mem.v(6) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "instr_mem.we_a" at mips_instr_mem.v(6) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "mips_registers" for hierarchy "mips_registers:registers"
+Info (12128): Elaborating entity "mips_alu" for hierarchy "mips_alu:alu"
+Warning (10036): Verilog HDL or VHDL warning at mips_alu.v(10): object "op_jr" assigned a value but never read
+Warning (10235): Verilog HDL Always Construct warning at mips_alu.v(27): variable "op_add" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_alu.v(31): variable "op_addu" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_alu.v(35): variable "op_and" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_alu.v(39): variable "op_nor" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_alu.v(43): variable "op_or" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_alu.v(47): variable "op_slt" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_alu.v(51): variable "op_sltu" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_alu.v(55): variable "op_sll" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_alu.v(59): variable "op_srl" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_alu.v(63): variable "op_sub" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_alu.v(68): variable "op_subu" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_alu.v(72): variable "op_beq" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at mips_alu.v(75): truncated value with size 32 to match size of target (1)
+Warning (10235): Verilog HDL Always Construct warning at mips_alu.v(77): variable "op_bne" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at mips_alu.v(80): truncated value with size 32 to match size of target (1)
+Warning (10763): Verilog HDL warning at mips_alu.v(26): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10270): Verilog HDL Case Statement warning at mips_alu.v(26): incomplete case statement has no default case item
+Info (12128): Elaborating entity "mips_data_mem" for hierarchy "mips_data_mem:datamem"
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276004): RAM logic "mips_instr_mem:instructionmem|instr_mem" is uninferred due to inappropriate RAM size
+    Info (276007): RAM logic "mips_registers:registers|registers" is uninferred due to asynchronous read logic
+Critical Warning (127005): Memory depth (16) in the design file differs from memory depth (11) in the Memory Initialization File "C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/db/141044076.ram0_mips_instr_mem_39ba2bbd.hdl.mif" -- setting initial value for remaining addresses to 0
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/db/141044076.ram0_mips_instr_mem_39ba2bbd.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "instruction[6]" is stuck at GND
+    Warning (13410): Pin "instruction[7]" is stuck at GND
+    Warning (13410): Pin "instruction[8]" is stuck at GND
+    Warning (13410): Pin "instruction[9]" is stuck at GND
+    Warning (13410): Pin "instruction[10]" is stuck at GND
+    Warning (13410): Pin "instruction[28]" is stuck at GND
+    Warning (13410): Pin "instruction[30]" is stuck at GND
+    Warning (13410): Pin "RegWrite" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 28 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1066 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 134 output pins
+    Info (21061): Implemented 931 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 545 megabytes
+    Info: Processing ended: Wed Jan 03 19:47:48 2018
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+

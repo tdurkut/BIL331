@@ -1,0 +1,144 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do 141044076_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/X550J/Desktop/=D/Bilgisayar\ Organizasyonu/final_project {C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_core.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+# vlog -vlog01compat -work work +incdir+C:/Users/X550J/Desktop/=D/Bilgisayar\ Organizasyonu/final_project {C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_control_unit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_control_unit
+# 
+# Top level modules:
+# 	mips_control_unit
+# vlog -vlog01compat -work work +incdir+C:/Users/X550J/Desktop/=D/Bilgisayar\ Organizasyonu/final_project {C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_alu
+# 
+# Top level modules:
+# 	mips_alu
+# vlog -vlog01compat -work work +incdir+C:/Users/X550J/Desktop/=D/Bilgisayar\ Organizasyonu/final_project {C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_registers.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+# vlog -vlog01compat -work work +incdir+C:/Users/X550J/Desktop/=D/Bilgisayar\ Organizasyonu/final_project {C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_instr_mem.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+# vlog -vlog01compat -work work +incdir+C:/Users/X550J/Desktop/=D/Bilgisayar\ Organizasyonu/final_project {C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_data_mem.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+# 
+vlog -reportprogress 300 -work work {C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/im_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module im_tb
+# 
+# Top level modules:
+# 	im_tb
+vlog -reportprogress 300 -work work {C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_alu
+# 
+# Top level modules:
+# 	mips_alu
+vlog -reportprogress 300 -work work {C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_control_unit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_control_unit
+# 
+# Top level modules:
+# 	mips_control_unit
+vlog -reportprogress 300 -work work {C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_core.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core
+# 
+# Top level modules:
+# 	mips_core
+vlog -reportprogress 300 -work work {C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_data_mem.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_data_mem
+# 
+# Top level modules:
+# 	mips_data_mem
+vlog -reportprogress 300 -work work {C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_instr_mem.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_instr_mem
+# 
+# Top level modules:
+# 	mips_instr_mem
+vlog -reportprogress 300 -work work {C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_registers.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_registers
+# 
+# Top level modules:
+# 	mips_registers
+vlog -reportprogress 300 -work work {C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_testbench.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_testbench
+# 
+# Top level modules:
+# 	mips_testbench
+vsim work.mips_testbench
+# vsim work.mips_testbench 
+# Loading work.mips_testbench
+# Loading work.mips_core
+# Loading work.mips_control_unit
+# Loading work.mips_instr_mem
+# Loading work.mips_registers
+# Loading work.mips_alu
+# Loading work.mips_data_mem
+add wave -position insertpoint  \
+sim:/mips_testbench/RegWrite \
+sim:/mips_testbench/clock \
+sim:/mips_testbench/func \
+sim:/mips_testbench/instruction \
+sim:/mips_testbench/opcode \
+sim:/mips_testbench/read_data_1 \
+sim:/mips_testbench/read_data_2 \
+sim:/mips_testbench/read_reg_1 \
+sim:/mips_testbench/read_reg_2 \
+sim:/mips_testbench/result \
+sim:/mips_testbench/shamt \
+sim:/mips_testbench/write_reg
+step -current
+# =====================================================================
+#  time:  0 instruction: 00000001111011100011100000100000 result:        108
+#  RS: 01111 RT: 01110 RD: 00111 Read_data_1: 00000000000000000000000001100000, Read_data_2: 00000000000000000000000000001100,  RegWrite signal: 1, RD adress: 00111
+# =====================================================================
+#  time: 50 instruction: 00000010000011110100000000100000 result:        112
+#  RS: 10000 RT: 01111 RD: 01000 Read_data_1: 00000000000000000000000000010000, Read_data_2: 00000000000000000000000001100000,  RegWrite signal: 1, RD adress: 01000
+# =====================================================================
+#  time: 150 instruction: 00000010000100011001000000100000 result:         33
+#  RS: 10000 RT: 10001 RD: 10010 Read_data_1: 00000000000000000000000000010000, Read_data_2: 00000000000000000000000000010001,  RegWrite signal: 1, RD adress: 10010
+# =====================================================================
+#  time: 250 instruction: 00100010011100110000000000000001 result:         38
+#  RS: 10011 RT: 10011 RD: 00000 Read_data_1: 00000000000000000000000000010011, Read_data_2: 00000000000000000000000000010011,  RegWrite signal: 1, RD adress: 00000
+# =====================================================================
+#  time: 350 instruction: 00000010100101010101100000101010 result:         41
+#  RS: 10100 RT: 10101 RD: 01011 Read_data_1: 00000000000000000000000000010100, Read_data_2: 00000000000000000000000000010101,  RegWrite signal: 1, RD adress: 01011
+# =====================================================================
+#  time: 450 instruction: 00101010110011000000000000010000 result:         54
+#  RS: 10110 RT: 01100 RD: 00000 Read_data_1: 00000000000000000000000000010110, Read_data_2: 00000000000000000000000000100000,  RegWrite signal: 1, RD adress: 00000
+# =====================================================================
+#  time: 550 instruction: 00000010000100011001000000100010 result:         33
+#  RS: 10000 RT: 10001 RD: 10010 Read_data_1: 00000000000000000000000000010000, Read_data_2: 00000000000000000000000000010001,  RegWrite signal: 1, RD adress: 10010
+# =====================================================================
+#  time: 650 instruction: 10001100101001110000000000001010 result:        113
+#  RS: 00101 RT: 00111 RD: 00000 Read_data_1: 00000000000000000000000000000101, Read_data_2: 00000000000000000000000001101100,  RegWrite signal: 1, RD adress: 00000

@@ -1,0 +1,29 @@
+module mips_alu(ALUOp, source1, source2, result, signal_zero);
+input [3:0] ALUOp;
+input [31:0] source1, source2;
+output [31:0] result;
+output signal_zero; // for branch
+
+reg [2:0] op_add= 3'd1;
+reg [2:0] op_addu= 3'd11;
+reg [2:0] op_and= 3'd2;
+reg [2:0] op_jr= 3'd0;
+reg [2:0] op_nor= 3'd3;
+reg [2:0] op_or= 3'd4;
+reg [2:0] op_slt= 3'd5;
+reg [2:0] op_sltu= 3'd10;
+reg [2:0] op_sll= 3'd6;
+reg [2:0] op_srl= 3'd7;
+reg [2:0] op_sub= 3'd9;
+reg [2:0] op_subu= 3'd8;
+
+always@(*)
+begin
+result = 0;
+signal_zero = 0;
+	case(ALUOp)
+		
+end
+
+
+endmodule

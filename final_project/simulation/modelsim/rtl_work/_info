@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\X550J\Desktop\=D\Bilgisayar Organizasyonu\final_project\simulation\modelsim
+vim_tb
+Ic92NRhTlbkD`JaP>B:Y__2
+V:?LannFmAfYCj[[dDHihb3
+Z1 dC:\Users\X550J\Desktop\=D\Bilgisayar Organizasyonu\final_project\simulation\modelsim
+w1514130904
+8C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/im_tb.v
+FC:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/im_tb.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-work work -O0
+!i10b 1
+!s100 `OhAIem9TcHJUQIE09N]13
+!s85 0
+!s108 1515012002.404000
+!s107 C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/im_tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/im_tb.v|
+!s101 -O0
+vmips_alu
+I`ik5=eA5^;R`bjh?MMkc61
+VRfDcgnBo^Q?_`]kio3=2G0
+R1
+w1514971313
+8C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_alu.v
+FC:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_alu.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 PgQ@L`JMa`N21h^<GUL5D1
+!s85 0
+!s108 1515012002.572000
+!s107 C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_alu.v|
+!s90 -reportprogress|300|-work|work|C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_alu.v|
+!s101 -O0
+vmips_control_unit
+IKTc_ZoKf5?[ab]R3SJ=a01
+VZ[Lba^08d<hHM9V7a?`FK0
+R1
+w1514987303
+8C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_control_unit.v
+FC:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_control_unit.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 :L^Rfe=GY^36YkW_:b>@B1
+!s85 0
+!s108 1515012002.719000
+!s107 C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_control_unit.v|
+!s90 -reportprogress|300|-work|work|C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_control_unit.v|
+!s101 -O0
+vmips_core
+I@mkLXjN;9Wee4jb<L<4aT1
+Vo@NJXg?ohS10aC27?0zG<2
+R1
+w1514998035
+8C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_core.v
+FC:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_core.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 ziQ?jEI7I46ddE[SLBI_Z2
+!s85 0
+!s108 1515012002.897000
+!s107 C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_core.v|
+!s90 -reportprogress|300|-work|work|C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_core.v|
+!s101 -O0
+vmips_data_mem
+IN^VTkiUmlfioWlL6JfZeS3
+V=]V?]aU[_L<Z>V8e5IN013
+R1
+w1514971252
+8C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_data_mem.v
+FC:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_data_mem.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 A?CZg3_@EWI6zniLnMij^2
+!s85 0
+!s108 1515012003.089000
+!s107 C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_data_mem.v|
+!s90 -reportprogress|300|-work|work|C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_data_mem.v|
+!s101 -O0
+vmips_instr_mem
+INPWWlZ8Q:JDXWafN]Y7D10
+VU@ZHcYETfgC=Cm>i=Z?MK1
+R1
+w1514971236
+8C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_instr_mem.v
+FC:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_instr_mem.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 KgL5]3UQ[TDR1F<7B5]:Z1
+!s85 0
+!s108 1515012003.315000
+!s107 C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_instr_mem.v|
+!s90 -reportprogress|300|-work|work|C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_instr_mem.v|
+!s101 -O0
+vmips_registers
+Ib;E?P[?Pj9fe@?nK25j[:3
+Vmi>XjRcVRM]RL99O;VVM51
+R1
+w1514972836
+8C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_registers.v
+FC:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_registers.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 hHA2_`ibIF=h?W>lgh4HL1
+!s85 0
+!s108 1515012003.491000
+!s107 C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_registers.v|
+!s90 -reportprogress|300|-work|work|C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_registers.v|
+!s101 -O0
+vmips_testbench
+!i10b 1
+!s100 =CF6D<]Q02Lnek]eYzgQR0
+Ig?9R>2KBfodhoRRP_m_XH0
+Vf2]IUD=7[>X:I4<2Q=7YA2
+R1
+w1514990142
+8C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_testbench.v
+FC:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_testbench.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1515012003.635000
+!s107 C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_testbench.v|
+!s90 -reportprogress|300|-work|work|C:/Users/X550J/Desktop/=D/Bilgisayar Organizasyonu/final_project/mips_testbench.v|
+!s101 -O0
+R3

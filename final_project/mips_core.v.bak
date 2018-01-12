@@ -1,0 +1,54 @@
+module mips_core(clock);
+input clock;
+
+wire [31:0] instruction;
+//wire [31:0] PC;
+//wire .........
+
+//assign ........
+//assign ........
+
+//modules ......
+
+//initial 
+//begin 
+//RS, RT ,RD Contents
+//shift amount
+//data adress
+//opCode name(add,lw)
+//PC
+//what ever you want to check 
+//$monitor("opCode: %6b, ALUResult: %3d",opcode,ALUResult);
+//end
+
+//just focus on build mips design 
+//////////////////////Read&write example///////////////////////////////////
+wire [31:0] write_data,read_data_1,read_data_2;
+wire signal_reg_write;
+wire [4:0] write_reg, read_reg_1, read_reg_2;
+
+//opcode[31:26]=0, func code[5:0]=20
+assign read_reg_1 = instruction[15:11];//rs
+assign  read_reg_2 = instruction[20:16]; //rt
+assign  write_reg = instruction[25:21];  //rd
+assign write_data = 32'b0;
+reg[31:0] PC = 32'b0;
+
+mips_instr_mem instructionmem(instruction, PC);
+mips_registers registers(read_data_1,read_data_2,write_data,read_reg_1,read_reg_2,write_reg,signal_reg_write,clock);
+
+//write sinyallerini control module içinde değiştirebilirsiniz. 
+//assign signal_reg_write = 1'b0;
+assign signal_reg_write = 1'b1;
+
+always @(posedge clock)
+begin 
+PC = PC+1;
+end 
+
+initial begin
+$monitor("RS: %32b, RT: %32b,  signal: %b, RD adress: %5b",read_data_1,read_data_2, signal_reg_write, write_reg);
+end
+
+
+endmodule

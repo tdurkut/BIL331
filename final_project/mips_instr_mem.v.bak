@@ -1,0 +1,14 @@
+module mips_instr_mem(clk,instruction, program_counter);
+input wire clk;
+input wire [31:0] program_counter;
+output wire [31:0] instruction;
+
+reg [31:0] instr_mem [255:0];
+
+initial begin
+	$readmemb("instruction.mem", instr_mem);
+end
+
+assign instruction = instr_mem[program_counter];
+
+endmodule
